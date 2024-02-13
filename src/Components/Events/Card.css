@@ -6,7 +6,7 @@
   width: 98%;
   margin-left: 1%;
   border-radius: 10%;
-  font-size: 1vw;
+  font-size: 1.1vw;
   flex-direction: row;
 }
 
@@ -15,21 +15,21 @@
 }
 
 .card-title {
-  padding-top: 5%;
+  padding-top: 3%;
   margin: 0;
 }
 
 .card-location {
-  padding-top: 5%;
+  padding-top: 3%;
   margin: 0;
 }
 
 .card-city {
-  padding-top: 5%;
+  padding-top: 3%;
   margin: 0;
 }
 
 .card-date {
-  padding-top: 5%;
+  padding-top: 3%;
   margin: 0;
 }
