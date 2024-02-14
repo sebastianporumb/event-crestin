@@ -24,11 +24,13 @@
   flex-direction: row;
   background-color: bisque;
   width: 90%;
+  overflow: hidden;
 }
 
 .main_1 {
   width: 30%;
   background-color: rgb(87, 147, 199);
+  overflow-y: auto;
 }
 
 .App-footer {
