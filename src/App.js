@@ -17,6 +17,12 @@ function App() {
     setSelectedCard(eventId);
   };
 
+  const renderParagraphs = (text) => {
+    return text
+      .split("\n")
+      .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -46,9 +52,9 @@ function App() {
                 alt="Selected Event"
               />
               <h2>Description</h2>
-              <p>{EventsDescription[selectedCard].description}</p>
+              {renderParagraphs(EventsDescription[selectedCard].description)}
               <h2>Details</h2>
-              <p>{EventsDescription[selectedCard].details}</p>
+              {renderParagraphs(EventsDescription[selectedCard].details)}
             </>
           )}
         </div>
