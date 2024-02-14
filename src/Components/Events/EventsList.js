@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
+import elBetel from "../Images/el-betel.jpg";
+import worship_night from "../Images/worship_night.jpg";
 
 const EventsList = () => {
   const EventsListData = [
@@ -9,7 +11,7 @@ const EventsList = () => {
       date: "16 Martie 2024, ora 10",
       city: "Cluj",
       location: "Casa de cultura",
-      image: "",
+      image: elBetel,
       type: "Concert",
     },
     {
@@ -18,7 +20,7 @@ const EventsList = () => {
       date: "19 Feb 2024, ora 18:00",
       city: "Cluj",
       location: "Biserica baptista Betel",
-      image: "",
+      image: worship_night,
       type: "Altele",
     },
   ];

@@ -5,7 +5,8 @@
   background-color: antiquewhite;
   width: 98%;
   margin-left: 1%;
-  border-radius: 10%;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
   font-size: 1.1vw;
   flex-direction: row;
 }
@@ -32,4 +33,9 @@
 .card-date {
   padding-top: 3%;
   margin: 0;
+}
+
+.card-image {
+  margin-left: 2%;
+  width: 40%;
 }
