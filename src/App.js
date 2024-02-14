@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import EventsList, { EventsListData } from "./Components/Events/EventsList";
@@ -7,8 +7,13 @@ import Card from "./Components/Events/Card";
 
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
+  const main2ContainerRef = useRef(null);
 
   const onEventClick = (eventId) => {
+    if (main2ContainerRef.current) {
+      main2ContainerRef.current.scrollTop = 0;
+    }
+
     setSelectedCard(eventId);
   };
 
@@ -32,7 +37,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="main_2">
+        <div className="main_2" ref={main2ContainerRef}>
           {selectedCard && (
             <>
               <img
