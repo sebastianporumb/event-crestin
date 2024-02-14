@@ -33,6 +33,15 @@
   overflow-y: auto;
 }
 
+.main_2 {
+  width: 70%;
+  overflow-y: auto;
+}
+
+.selected-card-image {
+  width: 80vh;
+}
+
 .App-footer {
   height: 10%;
   background-color: aquamarine;
