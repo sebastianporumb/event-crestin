@@ -11,7 +11,7 @@ export const EventsListData = [
     city: "Cluj",
     location: "Casa de cultura",
     image: elBetel,
-    type: "Concert",
+    type: "concert",
   },
   {
     id: "e2",
@@ -20,7 +20,7 @@ export const EventsListData = [
     city: "Cluj",
     location: "Biserica baptista Betel",
     image: worship_night,
-    type: "Altele",
+    type: "conferinta",
   },
 ];
 

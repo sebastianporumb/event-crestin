@@ -38,4 +38,6 @@
 .card-image {
   margin-left: 2%;
   width: 40%;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
 }
