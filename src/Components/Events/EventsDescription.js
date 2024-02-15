@@ -33,6 +33,16 @@ const EventsDescription = {
     description: "Description for Duminica tinerilor",
     details: "Additional details for the worship night event.",
   },
+  e3: {
+    image: EventsListData.find((event) => event.id === "e3").image,
+    description: "Description for Duminica tinerilor",
+    details: "Additional details for the worship night event.",
+  },
+  e4: {
+    image: EventsListData.find((event) => event.id === "e4").image,
+    description: "Description for Duminica tinerilor",
+    details: "Additional details for the worship night event.",
+  },
 };
 
 export default EventsDescription;

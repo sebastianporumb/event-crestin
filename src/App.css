@@ -89,6 +89,7 @@
 
 .selected-card-image {
   width: 80vh;
+  max-height: 100%;
   border-radius: 10%;
 }
 
