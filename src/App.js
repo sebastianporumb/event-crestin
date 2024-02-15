@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import EventsList, { EventsListData } from "./Components/Events/EventsList";
 import EventsDescription from "./Components/Events/EventsDescription";
@@ -26,7 +25,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div class="topnav">
+          <a class="active" href="#home">
+            Home
+          </a>
+          <a href="#concert">Concerte</a>
+          <a href="#conferinta">Conferinte</a>
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Titlu sau oras" name="search" />
+              <button type="submit">
+                Cauta
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
       </header>
 
       <main className="App-main">
