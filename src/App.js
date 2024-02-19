@@ -1,12 +1,13 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
-import EventsList, { EventsListData } from "./Components/Events/EventsList";
+import { EventsListData } from "./Components/Events/EventsList";
 import EventsDescription from "./Components/Events/EventsDescription";
 import Card from "./Components/Events/Card";
 
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [selectedEventType, setSelectedEventType] = useState("all");
+  const [searchText, setSearchText] = useState("");
   const main2ContainerRef = useRef(null);
 
   const onEventClick = (eventId) => {
@@ -21,6 +22,10 @@ function App() {
     setSelectedEventType(eventType);
   };
 
+  const handleSearch = (e) => {
+    setSearchText(e.target.value);
+  };
+
   const renderParagraphs = (text) => {
     return text
       .split("\n")
@@ -29,8 +34,17 @@ function App() {
 
   const filteredEvents =
     selectedEventType === "all"
-      ? EventsListData
-      : EventsListData.filter((event) => event.type === selectedEventType);
+      ? EventsListData.filter(
+          (event) =>
+            event.title.toLowerCase().includes(searchText.toLowerCase()) ||
+            event.city.toLowerCase().includes(searchText.toLowerCase())
+        )
+      : EventsListData.filter(
+          (event) =>
+            event.type === selectedEventType &&
+            (event.title.toLowerCase().includes(searchText.toLowerCase()) ||
+              event.city.toLowerCase().includes(searchText.toLowerCase()))
+        );
 
   return (
     <div className="App">
@@ -59,7 +73,13 @@ function App() {
           </a>
           <div class="search-container">
             <form action="/action_page.php">
-              <input type="text" placeholder="Titlu, oras" name="search" />
+              <input
+                type="text"
+                placeholder="Titlu, oras"
+                name="search"
+                value={searchText}
+                onChange={handleSearch}
+              />
               <button type="submit">
                 Cauta
                 <i class="fa fa-search"></i>
