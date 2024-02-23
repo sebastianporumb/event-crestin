@@ -5,8 +5,8 @@
   background-color: antiquewhite;
   width: 98%;
   margin-left: 1%;
-  border-top-left-radius: 10%;
-  border-bottom-left-radius: 10%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   font-size: 1.3vw;
   flex-direction: row;
 }

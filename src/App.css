@@ -5,16 +5,18 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
+  width: 100%;
 }
 
 .App-header {
   background-color: #1c3f49;
-  width: 90%;
+  width: 100%;
 }
 
 .topnav {
   overflow: hidden;
   background-color: #0d3f68;
+  height: 100%;
 }
 
 .topnav a:hover {
@@ -31,10 +33,10 @@
   float: left;
   display: block;
   color: rgb(233, 229, 229);
-  text-align: center;
+  align-items: center;
   padding: 2% 2%;
   text-decoration: none;
-  font-size: 1.3vw;
+  font-size: 100%;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
 }
@@ -42,12 +44,12 @@
 .topnav input[type="text"] {
   padding: 1%;
   margin-top: 0.8%;
-  font-size: 1.3vw;
+  font-size: 100%;
   border: none;
   border-radius: 5%;
 }
 
-.topnav .search-container button {
+/* .topnav .search-container button {
   padding: 1%;
   margin-top: 0.8%;
   margin-right: 3%;
@@ -56,7 +58,7 @@
   border: none;
   cursor: pointer;
   border-radius: 5%;
-}
+} */
 
 .topnav .search-container button:hover {
   background: #ccc;
@@ -67,23 +69,34 @@
 }
 
 .App-main {
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: row;
   background-color: bisque;
-  width: 90%;
+  width: 100%;
   overflow: hidden;
 }
 
 .main_1 {
-  width: 30%;
+  width: 100%;
   background-color: rgb(87, 147, 199);
   overflow-y: auto;
 }
 
+.main_1 > * {
+  flex: 0 0 50%;
+}
+
 .main_2 {
-  width: 70%;
   overflow-y: auto;
+}
+
+.App.card-selected .main_1 {
+  width: 30%;
+}
+
+.App.card-selected .main_2 {
+  width: 70%;
 }
 
 .selected-card-image {
@@ -93,9 +106,9 @@
 }
 
 .App-footer {
-  height: 10%;
+  height: 5%;
   background-color: rgb(212, 228, 223);
-  width: 90%;
+  width: 60vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
