@@ -18,7 +18,7 @@ const EventPopup = ({ event, onClose }) => {
     <div className="fullscreen-popup-overlay" onClick={handleOverlayClick}>
       <div className="fullscreen-popup">
         <span className="close-button" onClick={onClose}>
-          X
+          CLOSE
         </span>
         <div className="popup-content">
           <h2>{event.title}</h2>
