@@ -4,11 +4,13 @@ import { EventsListData } from "./Components/Events/EventsList";
 import EventsList from "./Components/Events/EventsList";
 import EventsDescription from "./Components/Events/EventsDescription";
 import EventPopup from "./Components/Events/EventPopup";
+import LoginForm from "./Components/Login/LoginForm";
 
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [selectedEventType, setSelectedEventType] = useState("all");
   const [searchText, setSearchText] = useState("");
+  const [showLoginForm, setShowLoginForm] = useState(false);
 
   const onEventClick = (eventId) => {
     setSelectedCard(eventId);
@@ -50,6 +52,8 @@ function App() {
         />
       )}
 
+      {showLoginForm && <LoginForm onClose={() => setShowLoginForm(false)} />}
+
       <div className="App">
         <header className="App-header">
           <div class="topnav">
@@ -85,6 +89,12 @@ function App() {
                 />
               </form>
             </div>
+            <button
+              className="login-button"
+              onClick={() => setShowLoginForm(true)}
+            >
+              Login
+            </button>
           </div>
         </header>
 

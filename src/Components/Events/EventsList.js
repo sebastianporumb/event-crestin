@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "./Card";
 import { newDate } from "./newDate";
 import "./EventsList.css";
-import { filteredEvents } from "../../App";
 import elBetel from "../Images/el-betel.jpg";
 import worship_night from "../Images/worship_night.jpg";
 import betania_dublin from "../Images/Betania Dublin.jpg";

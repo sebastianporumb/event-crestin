@@ -1,0 +1,74 @@
+.fullscreen-popup-overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.837);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-popup1 {
+  background: #fff;
+  padding: 2%;
+  border-radius: 2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 80%;
+  text-align: left;
+}
+
+.fullscreen-popup1 h2 {
+  margin-bottom: 4%;
+}
+
+.fullscreen-popup1 label {
+  display: block;
+  margin-bottom: 2%;
+}
+
+.fullscreen-popup1 input {
+  width: 100%;
+  padding: 3%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  box-sizing: border-box;
+}
+
+.fullscreen-popup1 .form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-popup1 button {
+  background-color: #4caf50;
+  color: white;
+  padding: 4% 6%;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.fullscreen-popup1 .form-links {
+  margin-top: 2%;
+}
+
+.fullscreen-popup1 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.fullscreen-popup1 a:hover {
+  text-decoration: underline;
+}
+
+.close-button1 {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  cursor: pointer;
+  color: #4caf50; /* Green */
+}

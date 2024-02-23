@@ -31,11 +31,11 @@ const EventPopup = ({ event, onClose }) => {
     <div className="fullscreen-popup-overlay" onClick={handleOverlayClick}>
       <div className="fullscreen-popup">
         <span className="close-button" onClick={onClose}>
-          CLOSE
+          CLOSE X press ESC
         </span>
         <div className="popup-content">
           <h2>{event.title}</h2>
-          <img src={event.image} alt="Event Image" />
+          <img src={event.image} alt="Event Image" className="img_popup" />
           <h2>Description</h2>
           {renderParagraphs(event.description)}
           <h2>Details</h2>
