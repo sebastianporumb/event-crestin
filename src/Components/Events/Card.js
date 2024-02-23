@@ -4,13 +4,14 @@ import { formatDate } from "./newDate";
 
 const Card = ({ id, title, date, location, city, image, onClick }) => {
   const handleClick = () => {
-    onClick(id);
+    onClick && onClick(id);
   };
 
   return (
     <div className="card" onClick={handleClick}>
       <div className="card-content">
         <p className="card-title">{title}</p>
+        <p className="card-location">{location}</p>
         <p className="card-city">{city}</p>
         <p className="card-date">{formatDate(date)}</p>
       </div>

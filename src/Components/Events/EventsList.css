@@ -1,0 +1,6 @@
+.events-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+  max-width: 98%;
+}

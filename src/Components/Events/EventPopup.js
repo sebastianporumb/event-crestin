@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./EventPopup.css";
 
 const EventPopup = ({ event, onClose }) => {
@@ -13,6 +13,19 @@ const EventPopup = ({ event, onClose }) => {
       onClose();
     }
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="fullscreen-popup-overlay" onClick={handleOverlayClick}>

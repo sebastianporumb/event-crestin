@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { EventsListData } from "./Components/Events/EventsList";
+import EventsList from "./Components/Events/EventsList";
 import EventsDescription from "./Components/Events/EventsDescription";
-import Card from "./Components/Events/Card";
 import EventPopup from "./Components/Events/EventPopup";
 
 function App() {
@@ -20,16 +20,11 @@ function App() {
 
   const handleEventTypeClick = (eventType) => {
     setSelectedEventType(eventType);
+    setSelectedCard(null);
   };
 
   const handleSearch = (e) => {
     setSearchText(e.target.value);
-  };
-
-  const renderParagraphs = (text) => {
-    return text
-      .split("\n")
-      .map((paragraph, index) => <p key={index}>{paragraph}</p>);
   };
 
   const filteredEvents =
@@ -95,17 +90,10 @@ function App() {
 
         <main className="App-main">
           <div className="main_1">
-            {filteredEvents.map((event) => (
-              <Card
-                key={event.id}
-                title={event.title}
-                date={event.date}
-                location={event.location}
-                city={event.city}
-                image={event.image}
-                onClick={() => onEventClick(event.id)}
-              />
-            ))}
+            <EventsList
+              onEventClick={onEventClick}
+              filteredEvents={filteredEvents}
+            />
           </div>
         </main>
 

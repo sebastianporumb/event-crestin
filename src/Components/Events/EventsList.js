@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import { newDate, formatDate } from "./newDate";
+import { newDate } from "./newDate";
+import "./EventsList.css";
+import { filteredEvents } from "../../App";
 import elBetel from "../Images/el-betel.jpg";
 import worship_night from "../Images/worship_night.jpg";
 import betania_dublin from "../Images/Betania Dublin.jpg";
@@ -45,21 +47,35 @@ export const EventsListData = [
   },
 ];
 
-const EventsList = ({ onEventClick }) => {
-  return (
-    <div>
-      {EventsListData.map((event) => (
-        <Card
-          key={event.id}
-          title={event.title}
-          date={event.date}
-          location={event.location}
-          city={event.city}
-          image={event.image}
-          onClick={() => onEventClick(event.id)}
-        />
-      ))}
-    </div>
-  );
+const EventsList = ({ onEventClick, filteredEvents }) => {
+  const renderEvents = () => {
+    const eventsRows = [];
+    const eventsCount = filteredEvents.length;
+
+    for (let i = 0; i < eventsCount; i += 2) {
+      const pair = [filteredEvents[i], filteredEvents[i + 1]].filter(Boolean);
+      eventsRows.push(pair);
+    }
+
+    return eventsRows.map((row, rowIndex) => (
+      <div key={rowIndex} className="events-row">
+        {row.map((event) => (
+          <Card
+            key={event.id}
+            id={event.id}
+            title={event.title}
+            date={event.date}
+            location={event.location}
+            city={event.city}
+            image={event.image}
+            onClick={onEventClick}
+          />
+        ))}
+      </div>
+    ));
+  };
+
+  return <div>{renderEvents()}</div>;
 };
+
 export default EventsList;

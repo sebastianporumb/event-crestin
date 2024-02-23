@@ -1,18 +1,17 @@
 .card {
   display: flex;
-  height: 9vw;
+  height: 15vw;
   margin-top: 1%;
   background-color: antiquewhite;
-  width: 98%;
+  width: 49%;
   margin-left: 1%;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  font-size: 1.3vw;
+  border-radius: 1vw;
+  font-size: 2vw;
   flex-direction: row;
 }
 
 .card-content {
-  width: 60%;
+  width: 70%;
 }
 
 .card-title {
@@ -38,6 +37,5 @@
 .card-image {
   margin-left: 2%;
   width: 40%;
-  border-top-left-radius: 5%;
-  border-bottom-left-radius: 5%;
+  border-radius: 1vw;
 }
