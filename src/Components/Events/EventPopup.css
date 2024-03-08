@@ -28,3 +28,8 @@
   color: #b80d0d;
   font-style: oblique;
 }
+
+.img_popup {
+  max-width: 40%;
+  max-height: 50%;
+}

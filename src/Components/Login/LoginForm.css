@@ -14,14 +14,17 @@
   background: #fff;
   padding: 2%;
   border-radius: 2%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2% rgba(0, 0, 0, 0.2);
   position: relative;
-  max-width: 80%;
-  text-align: left;
+  width: 30%;
+  height: 60%;
+  text-align: center;
 }
 
 .fullscreen-popup1 h2 {
   margin-bottom: 4%;
+  text-align: left;
+  color: rgba(81, 152, 196, 0.864);
 }
 
 .fullscreen-popup1 label {
@@ -70,5 +73,5 @@
   top: 2%;
   right: 3%;
   cursor: pointer;
-  color: #4caf50; /* Green */
+  color: #4caf50;
 }
