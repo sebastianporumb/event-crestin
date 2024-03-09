@@ -24,7 +24,7 @@ const LoginForm = ({ onClose }) => {
         <form onSubmit={handleSubmit}>
           <h2>Login</h2>
           <label>
-            Username:
+            Email:
             <input
               type="text"
               value={username}
@@ -41,7 +41,7 @@ const LoginForm = ({ onClose }) => {
           </label>
           <label>
             Remember me
-            <input type="checkbox" checked="checked" name="remember" />
+            <input type="checkbox" name="remember" />
           </label>
           <div className="form-actions">
             <button type="submit">Login</button>

@@ -3,9 +3,11 @@ import "./EventPopup.css";
 
 const EventPopup = ({ event, onClose }) => {
   const renderParagraphs = (text) => {
-    return text
-      .split("\n")
-      .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+    return text.split("\n").map((paragraph, index) => (
+      <p key={index} className="custom-paragraphs">
+        {paragraph}
+      </p>
+    ));
   };
 
   const handleOverlayClick = (e) => {
