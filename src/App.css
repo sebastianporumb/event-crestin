@@ -72,6 +72,17 @@
   border-radius: 10%;
 }
 
+#logo-image {
+  height: 7vw;
+  width: 10vw;
+  padding: 0;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
 .App-main {
   height: 90%;
   display: flex;
@@ -101,6 +112,10 @@
   height: 5%;
   background-color: rgb(212, 228, 223);
   width: 100%;
+}
+
+.logo-footer {
+  height: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

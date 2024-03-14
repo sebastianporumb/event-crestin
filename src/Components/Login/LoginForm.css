@@ -59,6 +59,11 @@
   margin-top: 2%;
 }
 
+.checkbox {
+  height: 1vw;
+  width: 1vw;
+}
+
 .fullscreen-popup1 a {
   color: #007bff;
   text-decoration: none;

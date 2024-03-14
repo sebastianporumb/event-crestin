@@ -12,6 +12,10 @@ const LoginForm = ({ onClose }) => {
     onClose();
   };
 
+  const handleRememberMeChange = () => {
+    setRememberMe(!rememberMe);
+  };
+
   return (
     <div className="fullscreen-popup-overlay1" onClick={onClose}>
       <div
@@ -29,6 +33,7 @@ const LoginForm = ({ onClose }) => {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              placeholder="name@email.com"
             />
           </label>
           <label>
@@ -37,11 +42,18 @@ const LoginForm = ({ onClose }) => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="password"
             />
           </label>
           <label>
             Remember me
-            <input type="checkbox" name="remember" />
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="remember"
+              checked={rememberMe}
+              onChange={handleRememberMeChange}
+            />
           </label>
           <div className="form-actions">
             <button type="submit">Login</button>

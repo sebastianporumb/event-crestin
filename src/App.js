@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { EventsListData } from "./Components/Events/EventsList";
 import EventsList from "./Components/Events/EventsList";
+import logo from "./Components/Images/EVENT.png";
 import EventsDescription from "./Components/Events/EventsDescription";
 import EventPopup from "./Components/Events/EventPopup";
 import LoginForm from "./Components/Login/LoginForm";
@@ -58,11 +59,12 @@ function App() {
         <header className="App-header">
           <div class="topnav">
             <a
+              id="logo-image"
               className={selectedEventType === "all" ? "active" : ""}
               onClick={() => handleEventTypeClick("all")}
               href="#home"
             >
-              Home
+              <img className="logo" src={logo} alt="Logo" />
             </a>
             <a
               className={selectedEventType === "concert" ? "active" : ""}
@@ -108,7 +110,7 @@ function App() {
         </main>
 
         <footer className="App-footer">
-          <p>App 2024</p>
+          <img className="logo-footer" src={logo} />
         </footer>
       </div>
     </div>
