@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./Card";
 import { newDate } from "./newDate";
 import "./EventsList.css";
@@ -7,7 +7,7 @@ import worship_night from "../Images/worship_night.jpg";
 import betania_dublin from "../Images/Betania Dublin.jpg";
 import Betel_timisoara from "../Images/Betel_timisoara.jpg";
 
-export const EventsListData = [
+const EventsListData = [
   {
     id: "e1",
     title: "Concert Betel orchestra",
@@ -77,4 +77,5 @@ const EventsList = ({ onEventClick, filteredEvents }) => {
   return <div>{renderEvents()}</div>;
 };
 
+export { EventsListData };
 export default EventsList;

@@ -1,4 +1,6 @@
-import EventsList, { EventsListData } from "./EventsList";
+import EventsList from "./EventsList";
+import { EventsListData } from "./EventsList";
+import NewEvent from "./NewEvents";
 
 const EventsDescription = {
   e1: {
@@ -43,6 +45,11 @@ const EventsDescription = {
     description: "Description for Duminica tinerilor",
     details: "Additional details for the worship night event.",
   },
+};
+
+EventsDescription[NewEvent.id] = {
+  image: NewEvent.image,
+  description: NewEvent.description,
 };
 
 export default EventsDescription;

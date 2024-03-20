@@ -6,12 +6,15 @@ import logo from "./Components/Images/EVENT.png";
 import EventsDescription from "./Components/Events/EventsDescription";
 import EventPopup from "./Components/Events/EventPopup";
 import LoginForm from "./Components/Login/LoginForm";
+import NewEvent from "./Components/Events/NewEvents";
 
 function App() {
+  const [eventsListData, setEventsListData] = useState(EventsListData);
   const [selectedCard, setSelectedCard] = useState(null);
   const [selectedEventType, setSelectedEventType] = useState("all");
   const [searchText, setSearchText] = useState("");
   const [showLoginForm, setShowLoginForm] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const onEventClick = (eventId) => {
     setSelectedCard(eventId);
@@ -28,6 +31,11 @@ function App() {
 
   const handleSearch = (e) => {
     setSearchText(e.target.value);
+  };
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+    setShowLoginForm(false);
   };
 
   const filteredEvents =
@@ -53,7 +61,18 @@ function App() {
         />
       )}
 
-      {showLoginForm && <LoginForm onClose={() => setShowLoginForm(false)} />}
+      {showLoginForm && (
+        <LoginForm
+          onClose={() => setShowLoginForm(false)}
+          onLogin={handleLogin}
+        />
+      )}
+      {loggedIn && (
+        <NewEvent
+          eventsListData={eventsListData}
+          setEventsListData={setEventsListData}
+        />
+      )}
 
       <div className="App">
         <header className="App-header">

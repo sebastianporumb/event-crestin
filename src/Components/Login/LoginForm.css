@@ -49,10 +49,15 @@
 .fullscreen-popup1 button {
   background-color: #4caf50;
   color: white;
-  padding: 4% 6%;
+  padding: 3% 4%;
   border: none;
   border-radius: 10%;
   cursor: pointer;
+  font-size: 1vw;
+}
+
+.fullscreen-popup1 a {
+  color: red;
 }
 
 .fullscreen-popup1 .form-links {
@@ -62,11 +67,6 @@
 .checkbox {
   height: 1vw;
   width: 1vw;
-}
-
-.fullscreen-popup1 a {
-  color: #007bff;
-  text-decoration: none;
 }
 
 .fullscreen-popup1 a:hover {
